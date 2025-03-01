@@ -26,4 +26,7 @@ position = Vector2(30.7898, 44.0175)
 progress = 3.88464
 
 [node name="Pessoas" parent="." instance=ExtResource("3_ihhfy")]
-position = Vector2(85, 41)
+position = Vector2(62, 30)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
