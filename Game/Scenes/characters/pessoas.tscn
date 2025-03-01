@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dlheer1qnk88w"]
 
-[ext_resource type="Texture2D" uid="uid://i36kn86dyfm6" path="res://icon.svg" id="1_7nosi"]
+[ext_resource type="Texture2D" uid="uid://i36kn86dyfm6" path="res://Assets/icon.svg" id="1_7nosi"]
 [ext_resource type="Script" path="res://Game/Scenes/characters/pessoas.gd" id="1_aj2c4"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_wbck7"]
@@ -8,7 +8,6 @@ friction = 0.0
 rough = true
 
 [node name="Pessoas" type="RigidBody2D"]
-scale = Vector2(0.5, 0.5)
 collision_layer = 4
 collision_mask = 6
 mass = 5.0
@@ -22,3 +21,8 @@ texture = ExtResource("1_7nosi")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-20, -6, -8, -18, 10, -18, 18, -8, 26, 2, 12, 22, 6, 28, 0, 22, -10, 28, -14, 20, -26, 22, -20, 12, -24, 4)
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

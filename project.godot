@@ -13,7 +13,7 @@ config_version=5
 config/name="Jam De Canaval"
 run/main_scene="res://Game/Scenes/levels/level_test_sora.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://Assets/icon.svg"
 
 [file_customization]
 

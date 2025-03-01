@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://0grpg2qle5ml"]
+
+[ext_resource type="PackedScene" uid="uid://rcu7rsioks5a" path="res://Game/Scenes/characters/foliao.tscn" id="1_hbsih"]
+[ext_resource type="Texture2D" uid="uid://i36kn86dyfm6" path="res://Assets/icon.svg" id="2_r1jb4"]
+
+[sub_resource type="Curve2D" id="Curve2D_qg07o"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 32, 19, 0, 0, 0, 0, 32, 19, 0, 0, 0, 0, 93, 51, 0, 0, 0, 0, 558, 305, 0, 0, 0, 0, 1130, 630)
+}
+point_count = 5
+
+[node name="Level1" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(547.5, 292.5)
+scale = Vector2(9.55469, 5.57031)
+texture = ExtResource("2_r1jb4")
+
+[node name="Caravana" type="Node2D" parent="."]
+
+[node name="Path2D" type="Path2D" parent="Caravana"]
+curve = SubResource("Curve2D_qg07o")
+
+[node name="Foliao" parent="Caravana/Path2D" instance=ExtResource("1_hbsih")]
+position = Vector2(31.8362, 18.9141)
+
+[node name="Foliao2" parent="Caravana/Path2D" instance=ExtResource("1_hbsih")]
+position = Vector2(31.8362, 18.9141)
+
+[node name="Foliao3" parent="Caravana/Path2D" instance=ExtResource("1_hbsih")]
+position = Vector2(31.8362, 18.9141)
+
+[node name="Foliao4" parent="Caravana/Path2D" instance=ExtResource("1_hbsih")]
+position = Vector2(31.8362, 18.9141)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(582, 320)

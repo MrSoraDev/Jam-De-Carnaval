@@ -1,14 +1,14 @@
 [gd_scene load_steps=5 format=3 uid="uid://xh7a7q5qebik"]
 
-[ext_resource type="Texture2D" uid="uid://i36kn86dyfm6" path="res://icon.svg" id="1_tl4b8"]
+[ext_resource type="Texture2D" uid="uid://i36kn86dyfm6" path="res://Assets/icon.svg" id="1_tl4b8"]
 [ext_resource type="PackedScene" uid="uid://rcu7rsioks5a" path="res://Game/Scenes/characters/foliao.tscn" id="2_4euoc"]
 [ext_resource type="PackedScene" uid="uid://dlheer1qnk88w" path="res://Game/Scenes/characters/pessoas.tscn" id="3_ihhfy"]
 
 [sub_resource type="Curve2D" id="Curve2D_imcud"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 27, 44, 0, 0, 0, 0, 244, 45, 0, 0, 0, 0, 353, 102, 0, 0, 0, 0, 564, 100, 0, 0, 0, 0, 680, 80, 0, 0, 0, 0, 735, 223, 0, 0, 0, 0, 740, 299, 0, 0, 0, 0, 626, 368, 0, 0, 0, 0, 290, 365, 0, 0, 0, 0, 128, 302)
+"points": PackedVector2Array(0, 0, 0, 0, 24, 30, 0, 0, 0, 0, 123, 30, 0, 0, 0, 0, 244, 45, 0, 0, 0, 0, 353, 102, 0, 0, 0, 0, 564, 100, 0, 0, 0, 0, 680, 80, 0, 0, 0, 0, 735, 223, 0, 0, 0, 0, 740, 299, 0, 0, 0, 0, 626, 368, 0, 0, 0, 0, 290, 365, 0, 0, 0, 0, 128, 302)
 }
-point_count = 10
+point_count = 11
 
 [node name="LevelTestSora" type="Node2D"]
 
@@ -22,11 +22,11 @@ metadata/_edit_lock_ = true
 curve = SubResource("Curve2D_imcud")
 
 [node name="Foliao" parent="Path2D" instance=ExtResource("2_4euoc")]
-position = Vector2(30.7898, 44.0175)
+position = Vector2(27.8473, 30)
 progress = 3.88464
 
 [node name="Pessoas" parent="." instance=ExtResource("3_ihhfy")]
-position = Vector2(62, 30)
+position = Vector2(93, 2)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
