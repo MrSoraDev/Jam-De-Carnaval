@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dlheer1qnk88w"]
+
+[ext_resource type="Texture2D" uid="uid://i36kn86dyfm6" path="res://icon.svg" id="1_7nosi"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_wbck7"]
+rough = true
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ca5cd"]
+radius = 20.0
+
+[node name="Pessoas" type="RigidBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_wbck7")
+gravity_scale = 0.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_7nosi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ca5cd")

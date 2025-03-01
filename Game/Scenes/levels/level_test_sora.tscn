@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://xh7a7q5qebik"]
+
+[ext_resource type="Texture2D" uid="uid://i36kn86dyfm6" path="res://icon.svg" id="1_tl4b8"]
+[ext_resource type="PackedScene" uid="uid://rcu7rsioks5a" path="res://Game/Scenes/characters/foliao.tscn" id="2_4euoc"]
+[ext_resource type="PackedScene" uid="uid://dlheer1qnk88w" path="res://Game/Scenes/characters/pessoas.tscn" id="3_ihhfy"]
+
+[sub_resource type="Curve2D" id="Curve2D_imcud"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 27, 44, 0, 0, 0, 0, 244, 45, 0, 0, 0, 0, 353, 102, 0, 0, 0, 0, 564, 100, 0, 0, 0, 0, 680, 80, 0, 0, 0, 0, 735, 223, 0, 0, 0, 0, 740, 299, 0, 0, 0, 0, 626, 368, 0, 0, 0, 0, 290, 365, 0, 0, 0, 0, 128, 302)
+}
+point_count = 10
+
+[node name="LevelTestSora" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(611, 330)
+scale = Vector2(10.5469, 6.15625)
+texture = ExtResource("1_tl4b8")
+metadata/_edit_lock_ = true
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_imcud")
+
+[node name="Foliao" parent="Path2D" instance=ExtResource("2_4euoc")]
+position = Vector2(30.7898, 44.0175)
+progress = 3.88464
+
+[node name="Pessoas" parent="." instance=ExtResource("3_ihhfy")]
+position = Vector2(85, 41)
