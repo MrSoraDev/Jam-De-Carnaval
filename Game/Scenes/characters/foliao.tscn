@@ -1,26 +1,68 @@
-[gd_scene load_steps=4 format=3 uid="uid://rcu7rsioks5a"]
+[gd_scene load_steps=8 format=3 uid="uid://rcu7rsioks5a"]
 
-[ext_resource type="Script" path="res://Game/Scenes/characters/foliao.gd" id="1_rexl6"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_jp1j5"]
-size = Vector2(16, 16)
+[ext_resource type="Texture2D" uid="uid://dettqoa42nk0a" path="res://Assets/trio.png" id="2_rs4pf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lcxcf"]
 radius = 13.0
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_kykp7"]
+atlas = ExtResource("2_rs4pf")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wl68q"]
+atlas = ExtResource("2_rs4pf")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vu7ka"]
+atlas = ExtResource("2_rs4pf")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7wafm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kykp7")
+}],
+"loop": true,
+"name": &"e",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wl68q")
+}],
+"loop": true,
+"name": &"q",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vu7ka")
+}],
+"loop": true,
+"name": &"w",
+"speed": 5.0
+}]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_bo8lu"]
+
 [node name="Foliao" type="PathFollow2D"]
 rotates = false
 loop = false
-script = ExtResource("1_rexl6")
-speed = 15
 
-[node name="RigidBody2D" type="CharacterBody2D" parent="."]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 collision_layer = 2
 collision_mask = 6
 
-[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
-modulate = Color(0.664402, 0.476112, 0.217254, 1)
-texture = SubResource("PlaceholderTexture2D_jp1j5")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 shape = SubResource("CircleShape2D_lcxcf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+sprite_frames = SubResource("SpriteFrames_7wafm")
+animation = &"e"
+autoplay = "q"
+
+[node name="Alerta" type="Sprite2D" parent="CharacterBody2D"]
+visible = false
+position = Vector2(0, -15)
+texture = SubResource("PlaceholderTexture2D_bo8lu")

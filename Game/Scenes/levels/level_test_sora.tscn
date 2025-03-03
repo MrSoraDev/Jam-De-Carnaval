@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://xh7a7q5qebik"]
+[gd_scene load_steps=4 format=3 uid="uid://xh7a7q5qebik"]
 
 [ext_resource type="Texture2D" uid="uid://i36kn86dyfm6" path="res://Assets/icon.svg" id="1_tl4b8"]
 [ext_resource type="PackedScene" uid="uid://rcu7rsioks5a" path="res://Game/Scenes/characters/foliao.tscn" id="2_4euoc"]
-[ext_resource type="PackedScene" uid="uid://dlheer1qnk88w" path="res://Game/Scenes/characters/pessoas.tscn" id="3_ihhfy"]
 
 [sub_resource type="Curve2D" id="Curve2D_imcud"]
 _data = {
@@ -25,8 +24,12 @@ curve = SubResource("Curve2D_imcud")
 position = Vector2(27.8473, 30)
 progress = 3.88464
 
-[node name="Pessoas" parent="." instance=ExtResource("3_ihhfy")]
-position = Vector2(93, 2)
+[node name="Foliao2" parent="Path2D" instance=ExtResource("2_4euoc")]
+position = Vector2(55.6747, 30)
+progress = 31.68
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
+
+[editable path="Path2D/Foliao"]
+[editable path="Path2D/Foliao2"]

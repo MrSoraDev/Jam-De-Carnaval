@@ -11,9 +11,19 @@ config_version=5
 [application]
 
 config/name="Jam De Canaval"
-run/main_scene="res://Game/Scenes/levels/level_test_sora.tscn"
+run/main_scene="res://Game/Scenes/levels/level_1.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://Assets/icon.svg"
+
+[autoload]
+
+SignalManager="*res://scripts/SignalManager.gd"
+AnimationsManager="*res://scripts/AnimationsManager.gd"
+
+[debug]
+
+gdscript/warnings/unused_parameter=0
+gdscript/warnings/unused_signal=0
 
 [file_customization]
 

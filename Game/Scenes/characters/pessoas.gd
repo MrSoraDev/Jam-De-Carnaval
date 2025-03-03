@@ -10,10 +10,7 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	#if started_position != global_position:
 	pass
-		
-	
-		
-		
+
 
 
 func _on_timer_timeout() -> void:
